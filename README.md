@@ -95,7 +95,7 @@ ORDER BY churn_rate DESC;
 **Ibrahim Kilic**
 - LinkedIn: https://www.linkedin.com/in/ibrahim-kilic01/
 - Email: ibrahimkilicit@gmail.com
-- Portfolio: 
+- Portfolio: https://public.tableau.com/app/profile/ibrahim.kilic/vizzes
 
 ---
 
