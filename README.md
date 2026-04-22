@@ -29,3 +29,74 @@ This project analyzes customer churn patterns in a telecommunications company to
 - **Jupyter Notebook:** Exploratory data analysis and visualization
 
 ##  Project Structure
+├── customer_churn_financial_analysis.ipynb  # Main analysis notebook
+├── sql_queries.sql                          # SQL queries for analysis
+├── telco_churn.db                          # SQLite database
+├── dashboard_summary.csv                   # KPI data for dashboard
+├── dashboard_contract.csv                  # Contract analysis data
+├── dashboard_revenue.csv                   # Revenue loss data
+└── README.md                               # Project documentation
+
+## Dashboard Preview
+
+https://public.tableau.com/app/profile/ibrahim.kilic/viz/CustomerChurnFinancialAnalysis/Dashboard1?publish=yes
+
+## Analysis Highlights
+
+### 1. Contract Type Analysis
+- Month-to-month: 42.7% churn rate
+- One year: 11.3% churn rate
+- Two year: 2.8% churn rate
+
+### 2. Tenure Impact
+- Churned customers average tenure: ~18 months
+- Retained customers average tenure: ~38 months
+- First 12 months = highest risk period
+
+### 3. Revenue Impact by Contract
+- Month-to-month: $1,450,165 annual loss
+- One year: $169,421 annual loss
+- Two year: $49,984 annual loss
+
+## How to Run
+
+1. Clone the repository:
+```bash
+git clone https://github.com/ibrahimkilic/customer-churn-financial-analysis.git
+cd customer-churn-financial-analysis
+```
+
+2. Install required packages:
+```bash
+pip install pandas numpy matplotlib seaborn jupyter plotly sqlalchemy
+```
+
+3. Open Jupyter Notebook:
+```bash
+jupyter notebook customer_churn_financial_analysis.ipynb
+```
+
+## Key SQL Queries
+
+**Churn Rate by Contract Type:**
+```sql
+SELECT 
+    Contract,
+    COUNT(*) as total_customers,
+    SUM(CASE WHEN Churn = 'Yes' THEN 1 ELSE 0 END) as churned_customers,
+    ROUND(SUM(CASE WHEN Churn = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) as churn_rate
+FROM customers
+GROUP BY Contract
+ORDER BY churn_rate DESC;
+```
+
+## Contact
+
+**Ibrahim Kilic**
+- LinkedIn: https://www.linkedin.com/in/ibrahim-kilic01/
+- Email: ibrahimkilicit@gmail.com
+- Portfolio: 
+
+---
+
+*Dataset: Telco Customer Churn (Kaggle)*
