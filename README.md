@@ -29,13 +29,13 @@ This project analyzes customer churn patterns in a telecommunications company to
 - **Jupyter Notebook:** Exploratory data analysis and visualization
 
 ##  Project Structure
-├── customer_churn_financial_analysis.ipynb  # Main analysis notebook
-├── sql_queries.sql                          # SQL queries for analysis
-├── telco_churn.db                          # SQLite database
-├── dashboard_summary.csv                   # KPI data for dashboard
-├── dashboard_contract.csv                  # Contract analysis data
-├── dashboard_revenue.csv                   # Revenue loss data
-└── README.md                               # Project documentation
+customer_churn_financial_analysis.ipynb # Main analysis notebook
+sql_queries.sql                         # SQL queries for analysis
+telco_churn.db                          # SQLite database
+dashboard_summary.csv                   # KPI data for dashboard
+dashboard_contract.csv                  # Contract analysis data
+dashboard_revenue.csv                   # Revenue loss data
+README.md                               # Project documentation
 
 ## Dashboard Preview
 
